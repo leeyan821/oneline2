@@ -11,7 +11,7 @@
 <body>
 <% 
 	request.setCharacterEncoding("UTF-8");
-	String num = request.getParameter("num");
+	String num = request.getParameter("no");
 
 	String url = "jdbc:mysql://localhost/world?characterEncoding=UTF-8&serverTimezone=UTC";
 	String user = "root";
@@ -32,5 +32,8 @@
 	con.close();
 	out.println("DB삭제 성공");
 %>	
+<form method="post" action="memo_list.jsp">
+	<input type="submit" value="리스트 확인"></input> 
+</form>
 </body>
 </html>
